@@ -1,50 +1,90 @@
-# Welcome to your Expo app 👋
+<div align="center" id="top"> 
+  <img src="https://i.pinimg.com/736x/bf/8a/76/bf8a76719f900b8757154eb3cfbc844a.jpg" alt="Whatsapp Clone" />
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+&#xa0;
 
-## Get started
+  <!-- <a href="https://whatsappclone.netlify.app">Demo</a> -->
+</div>
 
-1. Install dependencies
+<h1 align="center">Whatsapp Clone</h1>
 
-   ```bash
+<p align="center">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/vhiz/whatsapp-clone?color=56BEB8">
+
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/vhiz/whatsapp-clone?color=56BEB8">
+
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/vhiz/whatsapp-clone?color=56BEB8">
+
+  <img alt="License" src="https://img.shields.io/github/license/vhiz/whatsapp-clone?color=56BEB8">
+
+  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/vhiz/whatsapp-clone?color=56BEB8" /> -->
+
+  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/vhiz/whatsapp-clone?color=56BEB8" /> -->
+</p>
+
+<p align="center">
+  <a href="#about">About</a> •
+  <a href="#routes">Routes</a> •
+  <a href="#technologies">Technologies</a> •
+  <a href="#setup">Setup</a> •
+  <a href="#license">License</a>
+</p>
+
+## About
+
+WhatsApp Clone is a React Native application that mimics the core functionalities of the popular messaging app WhatsApp.
+
+## Routes
+
+### HomeTab
+
+- **Status**: Displays user status updates.
+- **Calls**: Shows the call history.
+- **Camera**: Opens the camera interface (tab bar hidden).
+- **Chats**: Displays the list of chats.
+- **Settings**: User settings and profile management.
+
+### Stack Screens
+
+- **EditStatus**: Allows users to edit their status.
+- **EditProfile**: Allows users to edit their profile.
+- **ChatScreen**: Displays the chat interface for a selected conversation.
+- **StaredMessage**: Shows starred messages.
+
+## Technologies
+
+- React Native
+- React Navigation
+- Expo
+- React Native Reanimated
+- @rneui/themed
+- @expo/vector-icons
+
+## Setup
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/vhiz/whatsapp-clone.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd whatsapp-clone
+   ```
+3. Install dependencies:
+   ```sh
    npm install
    ```
-
-2. Start the app
-
-   ```bash
-    npx expo start
+4. Start the development server:
+   ```sh
+   npm start
    ```
 
-In the output, you'll find options to open the app in a
+## License
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Made with :heart: by <a href="https://github.com/vhiz" target="_blank">Mgbeahurike Victor</a>
 
-## Get a fresh project
+&#xa0;
 
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+<a href="#top">Back to top</a>
