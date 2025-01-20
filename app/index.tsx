@@ -109,7 +109,11 @@ function HomeTab() {
           ),
         }}
       />
-      <Tab.Screen name="Calls" component={CallsScreen} />
+      <Tab.Screen
+        name="Calls"
+        component={CallsScreen}
+        options={{ headerShown: false }}
+      />
       <Tab.Screen
         name="Camera"
         component={CameraScreen}
