@@ -112,7 +112,7 @@ export default function CameraScreen({ navigation }: { navigation: any }) {
               showsHorizontalScrollIndicator={false}
               contentContainerStyle={{ height: hp(15) }}
             >
-              {albums && albums.map((album) => <AlbumEntry album={album} />)}
+              {albums && albums.map((album) => <AlbumEntry album={album} key={album.id} />)}
             </ScrollView>
             <View className="p-3 justify-between items-center flex-row">
               <TouchableOpacity>

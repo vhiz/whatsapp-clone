@@ -40,9 +40,15 @@ export default function SettingScreen({ navigation }: { navigation: any }) {
         </ListItem>
 
         <View className="w-full mt-4 bg-white">
-          <ListItem bottomDivider>
+          <ListItem
+            onPress={() => navigation.push("StaredMessage")}
+            bottomDivider
+          >
             <ListItem.Content>
-              <TouchableOpacity className="w-full">
+              <TouchableOpacity
+                onPress={() => navigation.push("StaredMessage")}
+                className="w-full"
+              >
                 <Text className="font-semibold">Stared messages</Text>
               </TouchableOpacity>
             </ListItem.Content>
@@ -62,9 +68,12 @@ export default function SettingScreen({ navigation }: { navigation: any }) {
           </ListItem>
         </View>
         <View className="w-full mt-4 bg-white">
-          <ListItem bottomDivider>
+          <ListItem onPress={() => navigation.push("Account")} bottomDivider>
             <ListItem.Content>
-              <TouchableOpacity className="w-full">
+              <TouchableOpacity
+                onPress={() => navigation.push("Account")}
+                className="w-full"
+              >
                 <Text className="font-semibold">Account</Text>
               </TouchableOpacity>
             </ListItem.Content>
@@ -72,9 +81,15 @@ export default function SettingScreen({ navigation }: { navigation: any }) {
               <Entypo name="chevron-small-right" size={24} color="blue" />
             </View>
           </ListItem>
-          <ListItem bottomDivider>
+          <ListItem
+            onPress={() => navigation.push("ChatSettings")}
+            bottomDivider
+          >
             <ListItem.Content>
-              <TouchableOpacity className="w-full">
+              <TouchableOpacity
+                onPress={() => navigation.push("ChatSettings")}
+                className="w-full"
+              >
                 <Text className="font-semibold">Chats</Text>
               </TouchableOpacity>
             </ListItem.Content>
@@ -82,9 +97,15 @@ export default function SettingScreen({ navigation }: { navigation: any }) {
               <Entypo name="chevron-small-right" size={24} color="blue" />
             </View>
           </ListItem>
-          <ListItem bottomDivider>
+          <ListItem
+            onPress={() => navigation.push("Notifications")}
+            bottomDivider
+          >
             <ListItem.Content>
-              <TouchableOpacity className="w-full">
+              <TouchableOpacity
+                onPress={() => navigation.push("Notifications")}
+                className="w-full"
+              >
                 <Text className="font-semibold">Notifications</Text>
               </TouchableOpacity>
             </ListItem.Content>
@@ -92,9 +113,15 @@ export default function SettingScreen({ navigation }: { navigation: any }) {
               <Entypo name="chevron-small-right" size={24} color="blue" />
             </View>
           </ListItem>
-          <ListItem bottomDivider>
+          <ListItem
+            onPress={() => navigation.push("DataStorage")}
+            bottomDivider
+          >
             <ListItem.Content>
-              <TouchableOpacity className="w-full">
+              <TouchableOpacity
+                onPress={() => navigation.push("DataStorage")}
+                className="w-full"
+              >
                 <Text className="font-semibold">Data and Storage Usage</Text>
               </TouchableOpacity>
             </ListItem.Content>

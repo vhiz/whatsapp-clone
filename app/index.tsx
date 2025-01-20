@@ -20,6 +20,11 @@ import { Header } from "@rneui/themed";
 import EditStatusScreen from "./navigation/EditStatusScreen";
 import EditProfileScreen from "./navigation/EditProfileScreen";
 import { Entypo } from "@expo/vector-icons";
+import StaredMessageScreen from "./navigation/StaredMessageScreen";
+import AccountScreen from "./navigation/AccountScreen";
+import DataScreen from "./navigation/DataScreen";
+import NotificationScreen from "./navigation/NotificationScreen";
+import ChatSettingScreen from "./navigation/ChatSettingScreen";
 export default function Index() {
   return (
     <NavigationIndependentTree>
@@ -99,6 +104,141 @@ function RootStack() {
               }
               centerComponent={{
                 text: "Edit Profile",
+                className: "text-lg font-bold",
+              }}
+            />
+          ),
+        }}
+      />
+      <Stack.Screen
+        name="StaredMessage"
+        component={StaredMessageScreen}
+        options={{
+          presentation: "modal",
+          animation: "fade_from_bottom",
+          header: (props) => (
+            <Header
+              backgroundColor="#f6f6f6"
+              leftComponent={
+                <Pressable
+                  hitSlop={20}
+                  className=" flex-row items-center"
+                  onPress={() => props.navigation.goBack()}
+                >
+                  <Entypo name="chevron-small-left" size={24} color="blue" />
+                  <Text className="text-primary line-clamp-1">Settings</Text>
+                </Pressable>
+              }
+              centerComponent={{
+                text: "Stared Message",
+                className: "text-lg font-bold",
+              }}
+            />
+          ),
+        }}
+      />
+      <Stack.Screen
+        name="Account"
+        component={AccountScreen}
+        options={{
+          presentation: "modal",
+          animation: "fade_from_bottom",
+          header: (props) => (
+            <Header
+              backgroundColor="#f6f6f6"
+              leftComponent={
+                <Pressable
+                  hitSlop={20}
+                  className=" flex-row items-center"
+                  onPress={() => props.navigation.goBack()}
+                >
+                  <Entypo name="chevron-small-left" size={24} color="blue" />
+                  <Text className="text-primary line-clamp-1">Settings</Text>
+                </Pressable>
+              }
+              centerComponent={{
+                text: "Account",
+                className: "text-lg font-bold",
+              }}
+            />
+          ),
+        }}
+      />
+      <Stack.Screen
+        name="ChatSettings"
+        component={ChatSettingScreen}
+        options={{
+          presentation: "modal",
+          animation: "fade_from_bottom",
+          header: (props) => (
+            <Header
+              backgroundColor="#f6f6f6"
+              leftComponent={
+                <Pressable
+                  hitSlop={20}
+                  className=" flex-row items-center"
+                  onPress={() => props.navigation.goBack()}
+                >
+                  <Entypo name="chevron-small-left" size={24} color="blue" />
+                  <Text className="text-primary line-clamp-1">Settings</Text>
+                </Pressable>
+              }
+              centerComponent={{
+                text: "Chats",
+                className: "text-lg font-bold",
+              }}
+            />
+          ),
+        }}
+      />
+      <Stack.Screen
+        name="Notifications"
+        component={NotificationScreen}
+        options={{
+          presentation: "modal",
+          animation: "fade_from_bottom",
+          header: (props) => (
+            <Header
+              backgroundColor="#f6f6f6"
+              leftComponent={
+                <Pressable
+                  hitSlop={20}
+                  className=" flex-row items-center"
+                  onPress={() => props.navigation.goBack()}
+                >
+                  <Entypo name="chevron-small-left" size={24} color="blue" />
+                  <Text className="text-primary line-clamp-1">Settings</Text>
+                </Pressable>
+              }
+              centerComponent={{
+                text: "Notifications",
+                className: "text-lg font-bold",
+              }}
+            />
+          ),
+        }}
+      />
+      <Stack.Screen
+        name="DataStorage"
+        component={DataScreen}
+        options={{
+          presentation: "modal",
+          animation: "fade_from_bottom",
+          header: (props) => (
+            <Header
+              backgroundColor="#f6f6f6"
+              leftComponent={
+                <Pressable
+                  hitSlop={20}
+                  className=" flex-row items-center"
+                  onPress={() => props.navigation.goBack()}
+                >
+                  <Entypo name="chevron-small-left" size={24} color="blue" />
+                  <Text className="text-primary line-clamp-1">Settings</Text>
+                </Pressable>
+              }
+              centerComponent={{
+                text: "Data and Storage Usage",
                 className: "text-lg font-bold",
               }}
             />
