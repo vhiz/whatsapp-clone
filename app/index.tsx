@@ -10,12 +10,13 @@ import "../global.css";
 import SettingScreen from "./navigation/SettingScreen";
 import CameraScreen from "./navigation/CameraScreen";
 import CallsScreen from "./navigation/CallsScreen";
-import { Platform } from "react-native";
+import { Platform, Pressable, Text } from "react-native";
 import MyTabBar from "@/components/MyTabBar";
 import ChatsScreen from "./navigation/ChatsScreen";
 import ChatScreen from "./navigation/ChatScreen";
 import ContactInfoScreen from "./navigation/ContactInfoScreen";
 import EditScreen from "./navigation/EditScreen";
+import { Header } from "@rneui/themed";
 export default function Index() {
   return (
     <NavigationIndependentTree>
@@ -59,7 +60,11 @@ function RootStack() {
       <Stack.Screen
         name="EditContact"
         component={EditScreen}
-        options={{ headerShown: false, presentation: "modal",animation:'fade_from_bottom' }}
+        options={{
+          headerShown: false,
+          presentation: "modal",
+          animation: "fade_from_bottom",
+        }}
       />
     </Stack.Navigator>
   );
@@ -70,13 +75,41 @@ function HomeTab() {
   return (
     <Tab.Navigator
       initialRouteName="Chats"
-      screenOptions={{ headerShown: false, animation: "shift" }}
+      screenOptions={({ route }) => ({
+        animation: "shift",
+      })}
       tabBar={(props) => <MyTabBar {...props} />}
     >
-      <Tab.Screen name="Status" component={StatusScreen} />
+      <Tab.Screen
+        name="Status"
+        component={StatusScreen}
+        options={{
+          header: (prop) => (
+            <Header
+              backgroundColor="#f6f6f6"
+              leftComponent={
+                <Pressable className="text-primary font-semibold">
+                  <Text>Privacy</Text>
+                </Pressable>
+              }
+              centerComponent={
+                <Text className="text-lg font-bold">Status</Text>
+              }
+            />
+          ),
+        }}
+      />
       <Tab.Screen name="Calls" component={CallsScreen} />
-      <Tab.Screen name="Camera" component={CameraScreen} />
-      <Tab.Screen name="Chats" component={ChatsScreen} />
+      <Tab.Screen
+        name="Camera"
+        component={CameraScreen}
+        options={{ headerShown: false, animation: "fade" }}
+      />
+      <Tab.Screen
+        name="Chats"
+        component={ChatsScreen}
+        options={{ headerShown: false }}
+      />
       <Tab.Screen name="Settings" component={SettingScreen} />
     </Tab.Navigator>
   );

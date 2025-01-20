@@ -67,8 +67,14 @@ export default function EditScreen({ navigation }: { navigation: any }) {
           </View>
         </View>
         <Divider />
-        <ListItem>
-          <Text className="text-lg font-semibold">Phone</Text>
+        <ListItem bottomDivider>
+          <View className="gap-4">
+            <Text className="text-lg font-semibold">Phone</Text>
+            <View className="flex-row items-center">
+              <Text className="text-lg font-semibold text-primary">mobile</Text>
+              <Entypo name="chevron-small-right" size={24} color="blue" />
+            </View>
+          </View>
           <ListItem.Content>
             <TouchableOpacity
               onPress={toggleVisible}
@@ -77,7 +83,7 @@ export default function EditScreen({ navigation }: { navigation: any }) {
               <Text>{selected.name}</Text>
               <Entypo name="chevron-small-right" size={24} color="blue" />
             </TouchableOpacity>
-            <View className="flex-row items-center justify-between border-y border-gray-200 p-3">
+            <View className="flex-row items-center justify-between border-t border-gray-200 p-3">
               <Text className="text-lg text-primary border-r border-gray-200">
                 {selected.dial_code}
               </Text>
@@ -91,13 +97,12 @@ export default function EditScreen({ navigation }: { navigation: any }) {
           </ListItem.Content>
         </ListItem>
         <View className="p-2 gap-2">
-
-        <Text className="text-lg text-primary border-r border-gray-200">
-          more fields
-        </Text>
-        <Text className="text-lg text-red-500 border-r border-gray-200">
-          Delete Contact
-        </Text>
+          <Text className="text-lg text-primary">
+            more fields
+          </Text>
+          <Text className="text-lg text-red-500">
+            Delete Contact
+          </Text>
         </View>
       </View>
       <BottomSheet

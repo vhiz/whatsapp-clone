@@ -16,6 +16,10 @@ export default function MyTabBar({
   navigation,
 }: BottomTabBarProps) {
   const { buildHref } = useLinkBuilder();
+  const currentRouteName = state.routes[state.index].name;
+  if (currentRouteName === "Camera") {
+    return null;
+  }
   return (
     <View className="flex-row items-center justify-between w-full bg-header">
       {state.routes.map((route, index) => {
