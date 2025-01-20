@@ -17,6 +17,7 @@ import ChatScreen from "./navigation/ChatScreen";
 import ContactInfoScreen from "./navigation/ContactInfoScreen";
 import EditScreen from "./navigation/EditScreen";
 import { Header } from "@rneui/themed";
+import EditStatusScreen from "./navigation/EditStatusScreen";
 export default function Index() {
   return (
     <NavigationIndependentTree>
@@ -60,6 +61,15 @@ function RootStack() {
       <Stack.Screen
         name="EditContact"
         component={EditScreen}
+        options={{
+          headerShown: false,
+          presentation: "modal",
+          animation: "fade_from_bottom",
+        }}
+      />
+      <Stack.Screen
+        name="EditStatus"
+        component={EditStatusScreen}
         options={{
           headerShown: false,
           presentation: "modal",

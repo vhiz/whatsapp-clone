@@ -35,7 +35,10 @@ export default function StatusScreen({ navigation }: { navigation: any }) {
           >
             <FontAwesome5 name="camera" size={18} color="blue" />
           </TouchableOpacity>
-          <TouchableOpacity className="rounded-full items-center p-2 justify-center w-14 h-14 bg-gray-300">
+          <TouchableOpacity
+            onPress={() => navigation.push("EditStatus")}
+            className="rounded-full items-center p-2 justify-center w-14 h-14 bg-gray-300"
+          >
             <FontAwesome name="pencil" size={18} color="blue" />
           </TouchableOpacity>
         </View>
