@@ -18,6 +18,8 @@ import ContactInfoScreen from "./navigation/ContactInfoScreen";
 import EditScreen from "./navigation/EditScreen";
 import { Header } from "@rneui/themed";
 import EditStatusScreen from "./navigation/EditStatusScreen";
+import EditProfileScreen from "./navigation/EditProfileScreen";
+import { Entypo } from "@expo/vector-icons";
 export default function Index() {
   return (
     <NavigationIndependentTree>
@@ -76,6 +78,33 @@ function RootStack() {
           animation: "fade_from_bottom",
         }}
       />
+      <Stack.Screen
+        name="EditProfile"
+        component={EditProfileScreen}
+        options={{
+          presentation: "modal",
+          animation: "fade_from_bottom",
+          header: (props) => (
+            <Header
+              backgroundColor="#f6f6f6"
+              leftComponent={
+                <Pressable
+                  hitSlop={20}
+                  className=" flex-row items-center"
+                  onPress={() => props.navigation.goBack()}
+                >
+                  <Entypo name="chevron-small-left" size={24} color="blue" />
+                  <Text className="text-primary line-clamp-1">Settings</Text>
+                </Pressable>
+              }
+              centerComponent={{
+                text: "Edit Profile",
+                className: "text-lg font-bold",
+              }}
+            />
+          ),
+        }}
+      />
     </Stack.Navigator>
   );
 }
@@ -124,7 +153,20 @@ function HomeTab() {
         component={ChatsScreen}
         options={{ headerShown: false }}
       />
-      <Tab.Screen name="Settings" component={SettingScreen} />
+      <Tab.Screen
+        name="Settings"
+        component={SettingScreen}
+        options={{
+          header: (props) => (
+            <Header
+              backgroundColor="#f6f6f6"
+              centerComponent={
+                <Text className="text-lg font-bold">Settings</Text>
+              }
+            />
+          ),
+        }}
+      />
     </Tab.Navigator>
   );
 }
